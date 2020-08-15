@@ -28,8 +28,11 @@ a {
     color: #11999E;
 }
 
+
+/* 
+We cannot directly make the menu-bar as fixed as the position of other bars will shift upwards
+*/
 .menu-bar {
-    /* padding-top: 2rem; */
     width: 100%;
     height: 7.4rem;
     margin: auto 0;
@@ -38,6 +41,9 @@ a {
     border-width: .5rem;
 }
 
+/* 
+Make another division inside the current and make it fixed 
+*/
 .fixed-bar {
     position: fixed;
     background: #a6dcef;
@@ -52,6 +58,8 @@ a {
     border-style: none none solid;
     border-color: #ddf3f5;
     border-width: .5rem;
+    /* To make the fixed bar to overlap everything else in the screen */
+    z-index: 2;
 }
 
 .menu {
@@ -205,4 +213,20 @@ a:hover {
     font-size: 1rem;
     margin-bottom: 0px;
     word-spacing: normal;
+}
+
+
+/*
+To keep the menu bar at correct location from the achors
+*/
+#middle-container {
+    scroll-margin-top: 4.7rem;
+}
+
+#skills {
+    scroll-margin-top: 7.4rem;
+}
+
+#contact-me {
+    scroll-margin-top: 7.4rem;
 }
